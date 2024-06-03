@@ -1,30 +1,22 @@
 <div class="edit-content">
     <div class="container">
         <div class="row">
-            <form action="" class="form-edit">
+            <form action="" class="form-edit" [formGroup]="form">
                 <div class="field">
-                    <label for="fname">First name</label>
-                    <input type="text" id="fname" name="fname" value="John" />
-                </div>
-                <div class="field">
-                    <label for="lname">Last name</label>
-                    <input type="text" id="lname" name="lname" value="Rambo">
+                    <label for="fname">Username</label>
+                    <input formControlName="username" type="text"/>
                 </div>
                 <div class="field">
                     <label for="phone">Phone number</label>
-                    <input type="text" id="phone" name="phone" value="+7 (999) 999-99-99">
+                    <input formControlName="phone" type="text"/>
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" value="johnrambo@gmail.com">
+                    <input formControlName="email" type="text"/>
                 </div>
                 <div class="field">
                     <label for="compN">Company name</label>
-                    <input type="text" id="compN" name="compN" value="U.S.A. Army">
-                </div>
-                <div class="field">
-                    <label for="jobT">Job Title</label>
-                    <input type="text" id="jobT" name="jobT" value="Soldier">
+                    <input formControlName="website" type="text"/>
                 </div>
             </form>
         </div>
@@ -32,8 +24,8 @@
 
         <div class="row">
             <div class="form-edit_buttons">
-                <a href="./table.html"><button class="button_back">Назад</button></a>
-                <a href="./table.html"><button class="button_edit">Редактировать</button></a>
+                <button class="button_back" routerLink="/list-contact">Назад</button>
+                <button class="button_edit" (click)="updateUser()"> Редактировать</button>
             </div>
         </div>
 
