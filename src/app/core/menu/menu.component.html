@@ -1,10 +1,10 @@
 <div class="tabs-container">
   <div class="tabs-data">
     <div class="tabs">
-      <div class="tabs-button" (click)="openPage('ADD_CONTACT')">
+      <div class="tabs-button" routerLink="/add-contact">
         Добавить контакт
       </div>
-      <div class="tabs-button" (click)="openPage('LIST_CONTACT')">
+      <div class="tabs-button" routerLink="/list-contact">
         Контакты {{ total }}
       </div>
     </div>

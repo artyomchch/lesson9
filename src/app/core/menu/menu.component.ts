@@ -13,10 +13,11 @@ export class MenuComponent implements OnInit {
   constructor(public usersService: UsersService) {}
 
   ngOnInit(): void {
-    this.namePage.emit('ADD_CONTACT');
+    setInterval(() => {this.total = this.usersService.getUsers().length})
+    //this.namePage.emit('ADD_CONTACT');
   }
 
-  public openPage(namePage: string) {
-    this.namePage.emit(namePage);
-  }
+  // public openPage(namePage: string) {
+  //   this.namePage.emit(namePage);
+  // }
 }

@@ -246,4 +246,16 @@ export class UsersService {
   public totalUsers(): number {
     return this.users.length;
   }
+
+  public getUser( id: number ): any  {
+    return this.users.find( user => user.id === id );  
+  }
+    
+  public addUser( user: any ){
+    this.users.push(user)
+  }
+    
+  public updateUser( id: number, user: any ){
+    this.users = this.users.map( u => u.id === id ? { ...u, ...user } : { ...u } )
+  }
 }

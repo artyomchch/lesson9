@@ -1,12 +1,13 @@
 <app-head></app-head>
-<hr />
-<app-menu (namePage)="namePage = $event" ></app-menu>
-<hr />
-<app-contacts>
-  
-  <h1>Helo!!</h1>
-  <span>Vasya</span>  
-    
+<hr>
+<app-menu></app-menu>
+<hr>
+
+<router-outlet></router-outlet>
+<!-- <app-contacts>
+
+
+
   <app-add-contact *ngIf="'ADD_CONTACT' === namePage"></app-add-contact>
   <app-list-contact *ngIf="'LIST_CONTACT' === namePage"></app-list-contact>
-</app-contacts>
+</app-contacts> -->
